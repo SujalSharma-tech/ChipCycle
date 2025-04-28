@@ -24,7 +24,7 @@
 
         <meta-data
             android:name="com.google.android.gms.auth.api.signin"
-            android:value="483041854486-eea67m56dfkl97h6rncmi95rig8dfeoc.apps.googleusercontent.com" />
+            android:value="" />
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyAIisUS7TCy9dOVTaSXtKGVvT3wOtWW-vY"/>
