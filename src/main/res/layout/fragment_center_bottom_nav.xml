@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1F1F2E"  tools:context=".activity.UsersMainActivity">
+    <com.google.android.material.appbar.MaterialToolbar
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:background="?attr/colorPrimary" app:title="E-Waste Centers"
+    app:titleTextColor="@android:color/white"
+    app:navigationIcon="@drawable/ic_left" app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    />
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+    <EditText
+        android:id="@+id/et_search_location"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/search_background" android:drawableStart="@android:drawable/ic_menu_search" android:drawablePadding="8dp"
+        android:hint="Search by state name"
+        android:inputType="text"
+        android:padding="12dp"
+        android:textColor="@android:color/white"
+        android:textColorHint="#A0A0A0"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_search"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Search Centers"
+        android:textColor="@android:color/white"
+        app:backgroundTint="#E91E63" app:cornerRadius="8dp"
+        app:layout_constraintTop_toBottomOf="@id/et_search_location"
+        app:layout_constraintStart_toStartOf="@id/et_search_location"
+        app:layout_constraintEnd_toEndOf="@id/et_search_location" />
+    <TextView
+        android:id="@+id/tv_results_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textColor="#C0C0C0"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/btn_search"
+        app:layout_constraintStart_toStartOf="@id/btn_search"
+        tools:text="0 Results Found" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_centers"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintTop_toBottomOf="@id/tv_results_count"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:listitem="@layout/center_card_nav"
+        android:clipToPadding="false" android:paddingBottom="8dp" />
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmer_view_container"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:layout_margin="16dp"
+        app:shimmer_auto_start="true"
+        android:visibility="invisible"
+        app:layout_constraintTop_toBottomOf="@+id/tv_results_count"
+        app:shimmer_duration="1500">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="16dp">
+
+            <View
+                android:layout_width="120dp"
+                android:layout_height="130dp"
+                android:background="@drawable/skeleton_bg"
+                android:layout_marginEnd="16dp"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:background="@drawable/skeleton_bg"
+                    android:layout_marginBottom="8dp"/>
+                <View
+                    android:layout_width="100dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/skeleton_bg"
+                    android:layout_marginBottom="8dp"/>
+
+                <View
+                    android:layout_width="70dp"
+                    android:layout_height="12dp"
+                    android:background="@drawable/skeleton_bg"/>
+            </LinearLayout>
+        </LinearLayout>
+    </com.facebook.shimmer.ShimmerFrameLayout>
+    <TextView
+        android:id="@+id/tv_empty_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No centers found in this area"
+        android:textColor="#A0A0A0"
+        android:textSize="16sp"
+        android:visibility="gone" app:layout_constraintTop_toTopOf="@id/rv_centers"
+        app:layout_constraintBottom_toBottomOf="@id/rv_centers"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="0.4" />
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_expand_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Expand Search Radius"
+        android:textColor="@android:color/white"
+        android:visibility="gone" app:backgroundTint="#883F8E" app:cornerRadius="8dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_empty_message"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "483041854486",
+    "project_id": "chipcycle",
+    "storage_bucket": "chipcycle.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:483041854486:android:3caf839188bb3c5e7d6137",
+        "android_client_info": {
+          "package_name": "com.example.chipcycle"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "483041854486-eea67m56dfkl97h6rncmi95rig8dfeoc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.chipcycle",
+            "certificate_hash": "6a2cecec30c8ceed59bf686c25843961e1687bac"
+          }
+        },
+        {
+          "client_id": "483041854486-sa30a2bvkffj345ad8b1jdc53fknvhbk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBD-BgAGdACjmhDzkO8UiJyWuP6wpJ00ks"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "483041854486-sa30a2bvkffj345ad8b1jdc53fknvhbk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

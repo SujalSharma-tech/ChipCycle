@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#121212"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Header Area -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="16dp">
+
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/card_background"
+            android:src="@drawable/ic_left"
+            android:layout_alignParentStart="true"
+            android:contentDescription="Back" />
+
+        <TextView
+            android:id="@+id/tv_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Edit Profile"
+            android:textColor="#BB86FC"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+
+    <!-- Main Scrollable Content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="24dp">
+
+            <!-- DP Upload Area -->
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <ImageView
+                    android:id="@+id/iv_profile_picture"
+                    android:layout_width="140dp"
+                    android:layout_height="140dp"
+                    android:src="@drawable/baseline_person_24"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/circle_accent_background"
+                    android:padding="10dp" />
+
+                <ImageButton
+                    android:id="@+id/btn_upload_picture"
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    android:background="@drawable/circle_accent_background"
+                    android:src="@drawable/ic_camera"
+                    android:tint="#FFFFFF"
+                    android:layout_gravity="bottom|end"
+                    android:layout_margin="10dp"
+                    android:contentDescription="Upload Photo" />
+            </FrameLayout>
+
+            <!-- Fields -->
+            <!-- Name -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Name"
+                android:textColor="#BB86FC"
+                android:textSize="22sp"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:id="@+id/et_name"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@drawable/rectangular_edittext_bg"
+                android:paddingHorizontal="16dp"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#AAAAAA"
+                android:hint="Enter your name"
+                android:gravity="center_vertical"
+                android:textSize="18sp" />
+
+            <!-- Email -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Email Address"
+                android:textColor="#BB86FC"
+                android:textSize="22sp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:id="@+id/et_email"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@drawable/rectangular_edittext_bg"
+                android:paddingHorizontal="16dp"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#AAAAAA"
+                android:gravity="center_vertical"
+                android:hint="Enter your email"
+                android:inputType="textEmailAddress"
+                android:textSize="18sp" />
+
+            <!-- Phone -->
+
+
+            <!-- Location -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Location"
+                android:textColor="#BB86FC"
+                android:textSize="22sp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:id="@+id/et_location"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@drawable/rectangular_edittext_bg"
+                android:paddingHorizontal="16dp"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#AAAAAA"
+                android:gravity="center_vertical"
+                android:hint="Enter your location"
+                android:textSize="18sp" />
+
+            <!-- Bio -->
+<!--            <TextView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Bio"-->
+<!--                android:textColor="#BB86FC"-->
+<!--                android:textSize="22sp"-->
+<!--                android:layout_marginTop="20dp"-->
+<!--                android:layout_marginBottom="4dp" />-->
+
+<!--            <EditText-->
+<!--                android:id="@+id/et_bio"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="140dp"-->
+<!--                android:background="@drawable/rectangular_edittext_bg"-->
+<!--                android:padding="16dp"-->
+<!--                android:textColor="#FFFFFF"-->
+<!--                android:textColorHint="#AAAAAA"-->
+<!--                android:gravity="top"-->
+<!--                android:hint="Write a short bio"-->
+<!--                android:inputType="textMultiLine"-->
+<!--                android:textSize="16sp" />-->
+
+            <!-- Preferences -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Preferences"
+                android:textColor="#BB86FC"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="8dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingVertical="8dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Push Notifications"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp" />
+
+                <Switch
+                    android:id="@+id/switch_push"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:thumbTint="#BB86FC"
+                    android:trackTint="#BB86FC" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingVertical="8dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Email Updates"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp" />
+
+                <Switch
+                    android:id="@+id/switch_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:thumbTint="#BB86FC"
+                    android:trackTint="#BB86FC" />
+            </LinearLayout>
+
+            <!-- Buttons -->
+            <Button
+                android:id="@+id/btn_save_changes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Save Changes"
+                android:backgroundTint="#BB86FC"
+                android:textColor="#FFFFFF"
+                android:layout_marginTop="32dp" />
+
+            <Button
+                android:id="@+id/btn_cancel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cancel"
+                android:backgroundTint="#FFFFFF"
+                android:textColor="#BB86FC"
+                android:layout_marginTop="16dp" />
+            <Button
+                android:id="@+id/btn_logout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Logout"
+                android:backgroundTint="#92FF0000"
+                android:textColor="@color/white"
+                android:layout_marginTop="16dp" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

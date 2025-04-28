@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="YellowRatingBarTheme" parent="ThemeOverlay.AppCompat.Light">
+        <item name="colorControlActivated">#FFD700</item> <!-- Yellow for filled stars -->
+    </style>
+</resources>
